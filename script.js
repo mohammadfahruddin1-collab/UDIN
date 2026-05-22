@@ -1,116 +1,118 @@
+/* =========================
+   PAGE FLIP 3D
+========================= */
 
-# 3. FILE script.js
+const pageFlip = new St.PageFlip(
+    document.getElementById("book"),
+    {
+        width: 900,
+        height: 600,
 
-```javascript
-const targetDate = new Date("July 12, 2026 08:00:00").getTime();
+        size: "stretch",
 
-const countdown = setInterval(() => {
+        minWidth: 315,
+        maxWidth: 1200,
+
+        minHeight: 400,
+        maxHeight: 800,
+
+        showCover: true,
+
+        mobileScrollSupport: true,
+
+        flippingTime: 1200,
+
+        usePortrait: true,
+
+        startPage: 0,
+
+        autoSize: true,
+
+        maxShadowOpacity: 0.5
+    }
+);
+
+pageFlip.loadFromHTML(
+    document.querySelectorAll(".page")
+);
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+document
+.getElementById("openBook")
+.addEventListener("click", () => {
+
+    pageFlip.flipNext();
+
+});
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const targetDate = new Date(
+    "2026-06-17T06:00:00"
+).getTime();
+
+function updateCountdown(){
 
     const now = new Date().getTime();
 
     const distance = targetDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    if(distance <= 0){
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-    if(distance < 0) {
-        clearInterval(countdown);
+        return;
     }
 
-}, 1000);
+    const days = Math.floor(
+        distance /
+        (1000 * 60 * 60 * 24)
+    );
 
+    const hours = Math.floor(
+        (distance %
+        (1000 * 60 * 60 * 24))
+        /
+        (1000 * 60 * 60)
+    );
 
-const openBtn = document.getElementById("openBtn");
+    const minutes = Math.floor(
+        (distance %
+        (1000 * 60 * 60))
+        /
+        (1000 * 60)
+    );
 
-openBtn.addEventListener("click", () => {
+    const seconds = Math.floor(
+        (distance %
+        (1000 * 60))
+        /
+        1000
+    );
 
-    document.getElementById("invitation")
-    .scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById(
+        "days"
+    ).innerHTML = days;
 
-});
-```
+    document.getElementById(
+        "hours"
+    ).innerHTML = hours;
 
----
+    document.getElementById(
+        "minutes"
+    ).innerHTML = minutes;
 
-# FOTO YANG DISARANKAN
+    document.getElementById(
+        "seconds"
+    ).innerHTML = seconds;
+}
 
-## Background Cover:
+updateCountdown();
 
-* Foto masjid pondok
-* Lampu malam pondok
-* Santri mengaji siluet
-* Kaligrafi samar
-
-## Galeri:
-
-* Muhadhoroh
-* Hafalan Qur'an
-* Kegiatan kebersihan
-* Hadroh
-* Pengajian umum
-* Foto kebersamaan santri
-
----
-
-# MUSIK YANG COCOK
-
-Bisa gunakan:
-
-* Sholawat instrumental
-* Gambus lembut
-* Piano islami
-* Maher Zain instrumental
-
----
-
-# HOSTING GRATIS
-
-Bisa upload di:
-
-* GitHub Pages
-* Netlify
-* Vercel
-
----
-
-# BAGIAN YANG NANTI BISA KAMU GANTI
-
-Cari tulisan ini di HTML:
-
-```html
-KH. Ahmad Syafi'i
-```
-
-Ganti nama kiai.
-
----
-
-Cari ini:
-
-```javascript
-July 12, 2026
-```
-
-Ganti tanggal acara.
-
----
-
-Cari folder:
-
-```text
-images/
-```
-
-Masukkan foto pondokmu sendiri.
+setInterval(
+    updateCountdown,
+    1000
+);
