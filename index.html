@@ -1,14 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Undangan Imtihanan</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- PAGE FLIP -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/page-flip/dist/css/page-flip.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,148 +22,167 @@
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="overlay"></div>
+<div class="background"></div>
 
-<!-- COVER -->
-<section class="page cover" id="cover">
+<div class="book-wrapper">
 
-    <div class="cover-content">
+    <div id="book">
 
-        <p class="small-text">UNDANGAN RESMI</p>
+        <!-- HALAMAN 1 -->
+        <div class="page cover-page">
 
-        <h1>
-            IMTIHANAN
-            <span>&</span>
-            HAFLATUL IMTIHAN WAL IKHTIBAR
-        </h1>
+            <div class="cover-content">
 
-        <div class="line"></div>
+                <p class="small-text">
+                    UNDANGAN RESMI
+                </p>
 
-        <p class="pondok">
-            Pondok Pesantren
-            <br>
-            <strong>AN-NUR FUADI BANGKALAN</strong>
-        </p>
+                <h1>
+                    IMTIHANAN
+                    <span>&</span>
+                    HAFLATUL IKHTITAM
+                </h1>
 
-        <div class="guest-box">
-            <p>Kepada Yth :</p>
-            <h2>KH. M. Mukhlis Saif Al-Qomi, S.Pd.</h2>
-        </div>
+                <div class="line"></div>
 
-        <button id="openBtn">
-            Buka Undangan
-        </button>
+                <p class="pondok">
+                    Pondok Pesantren
+                    <br>
 
-    </div>
+                    <strong>
+                        PP AN NUR FUADI
+                        LI TAHFIDZIL QURAN
+                        <br>
+                        BANGKALAN
+                    </strong>
+                </p>
 
-</section>
+                <div class="guest-box">
 
-<!-- PAGE 2 -->
-<section class="page invitation" id="invitation">
+                    <p>Kepada Yth :</p>
 
-    <div class="book-card">
+                    <h2>
+                        K.H M. MUKHLIS
+                        SAIF ALQOMI, S.PD.
+                    </h2>
 
-        <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+                </div>
 
-        <p>
-            Dengan penuh hormat kami mengundang
-            Bapak/Ibu/Saudara untuk menghadiri acara
-            Imtihanan dan Haflatul Ikhtitam
-            Pondok Pesantren An-Nur Fuadi Bangkalan
-        </p>
+                <button id="openBook">
+                    Buka Undangan
+                </button>
 
-        <div class="event-box">
-
-            <div>
-                <h3>Hari</h3>
-                <p>Rabu</p>
-            </div>
-
-            <div>
-                <h3>Tanggal</h3>
-                <p>17 Juni 2026</p>
-            </div>
-
-            <div>
-                <h3>Waktu</h3>
-                <p>06.00 WIB</p>
             </div>
 
         </div>
 
-        <div class="location">
-            <h3>Tempat Acara</h3>
-            <p>
-                Pondok Pesantren An-Nur Fuadi Bangkalan
-                <br>
-                Jawa Timur
-            </p>
+        <!-- HALAMAN 2 -->
+        <div class="page invitation-page">
+
+            <div class="book-card">
+
+                <h2>
+                    Assalamu'alaikum
+                    Warahmatullahi Wabarakatuh
+                </h2>
+
+                <p>
+                    Dengan penuh hormat kami
+                    mengundang Bapak/Ibu/Saudara
+                    untuk menghadiri acara
+                    Imtihanan dan Haflatul Ikhtitam
+                    Pondok Pesantren
+                    PP AN NUR FUADI
+                    LI TAHFIDZIL QURAN
+                    BANGKALAN.
+                </p>
+
+                <div class="event-box">
+
+                    <div>
+                        <h3>Hari</h3>
+                        <p>Rabu</p>
+                    </div>
+
+                    <div>
+                        <h3>Tanggal</h3>
+                        <p>17 Juni 2026</p>
+                    </div>
+
+                    <div>
+                        <h3>Waktu</h3>
+                        <p>06.00 WIB</p>
+                    </div>
+
+                </div>
+
+                <div class="location">
+
+                    <h3>Lokasi Pondok</h3>
+
+                    <a href="https://maps.google.com"
+                    target="_blank"
+                    class="maps-btn">
+
+                    📍 Buka Google Maps
+
+                    </a>
+
+                </div>
+
+                <!-- COUNTDOWN -->
+                <div class="countdown">
+
+                    <div>
+                        <span id="days">0</span>
+                        <small>Hari</small>
+                    </div>
+
+                    <div>
+                        <span id="hours">0</span>
+                        <small>Jam</small>
+                    </div>
+
+                    <div>
+                        <span id="minutes">0</span>
+                        <small>Menit</small>
+                    </div>
+
+                    <div>
+                        <span id="seconds">0</span>
+                        <small>Detik</small>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="countdown">
-            <div>
-                <span id="days">0</span>
-                <small>Hari</small>
+        <!-- HALAMAN 3 -->
+        <div class="page gallery-page">
+
+            <h2>Kegiatan Pondok</h2>
+
+            <div class="gallery-grid">
+
+                <img src="images/foto1.jpg">
+                <img src="images/foto2.jpg">
+                <img src="images/foto3.jpg">
+                <img src="images/foto4.jpg">
+
             </div>
 
-            <div>
-                <span id="hours">0</span>
-                <small>Jam</small>
-            </div>
-
-            <div>
-                <span id="minutes">0</span>
-                <small>Menit</small>
-            </div>
-
-            <div>
-                <span id="seconds">0</span>
-                <small>Detik</small>
-            </div>
         </div>
 
     </div>
 
-</section>
+</div>
 
-<!-- GALERI -->
-<section class="page gallery">
+<!-- PAGE FLIP -->
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
 
-    <h2>Kegiatan Pondok</h2>
-
-    <div class="gallery-grid">
-
-        <img src="images/foto1.jpg">
-        <img src="images/foto2.jpg">
-        <img src="images/foto3.jpg">
-        <img src="images/foto4.jpg">
-
-    </div>
-
-</section>
-
-<!-- PENUTUP -->
-<section class="page closing">
-
-    <div class="closing-card">
-
-        <h2>Terima Kasih</h2>
-
-        <p>
-            Merupakan suatu kehormatan dan kebahagiaan
-            bagi kami apabila Bapak/Ibu/Saudara
-            berkenan hadir dalam acara kami.
-        </p>
-
-        <h3>
-            Wassalamu'alaikum
-            Warahmatullahi Wabarakatuh
-        </h3>
-
-    </div>
-
-</section>
-
+<!-- JS -->
 <script src="script.js"></script>
 
 </body>
