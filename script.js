@@ -1,22 +1,18 @@
-/* ======================
-   PAGE FLIP
-====================== */
-
 const pageFlip = new St.PageFlip(
     document.getElementById("book"),
     {
-        width: 1000,
-        height: 700,
+        width: window.innerWidth,
+        height: window.innerHeight,
 
-        size: "stretch",
+        size: "fixed",
 
-        minWidth: 320,
-        maxWidth: 2000,
+        minWidth: window.innerWidth,
+        maxWidth: window.innerWidth,
 
-        minHeight: 400,
-        maxHeight: 2000,
+        minHeight: window.innerHeight,
+        maxHeight: window.innerHeight,
 
-        showCover: true,
+        showCover: false,
 
         usePortrait: true,
 
@@ -24,12 +20,11 @@ const pageFlip = new St.PageFlip(
 
         autoSize: true,
 
-        maxShadowOpacity: 0.3,
+        maxShadowOpacity: 0.2,
 
         flippingTime: 1000
     }
 );
-
 pageFlip.loadFromHTML(
     document.querySelectorAll(".page")
 );
