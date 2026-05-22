@@ -301,3 +301,31 @@ button:hover{
     }
 
 }
+/* FIX CENTER PAGEFLIP */
+
+.stf__parent{
+    margin:0 auto !important;
+
+    left:0 !important;
+    top:0 !important;
+
+    transform:none !important;
+}
+
+/* HILANGKAN SPACE SAMPING */
+
+.stf__wrapper{
+    width:100vw !important;
+    height:100vh !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+}
+
+/* PAGE FULLSCREEN */
+
+.stf__block{
+    width:100vw !important;
+    height:100vh !important;
+}
