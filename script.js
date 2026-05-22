@@ -4,7 +4,7 @@ const pageFlip = new St.PageFlip(
         width: window.innerWidth,
         height: window.innerHeight,
 
-        size: "fixed",
+        size: "stretch",
 
         minWidth: window.innerWidth,
         maxWidth: window.innerWidth,
