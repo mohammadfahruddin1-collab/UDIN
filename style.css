@@ -32,12 +32,14 @@ body{
 /* BOOK */
 
 .book-wrapper{
-    width:100%;
+    position:fixed;
+
+    width:100vw;
     height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    inset:0;
+
+    overflow:hidden;
 }
 
 #book{
