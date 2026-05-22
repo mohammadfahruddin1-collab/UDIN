@@ -1,34 +1,32 @@
-/* =========================
-   PAGE FLIP 3D
-========================= */
+/* ======================
+   PAGE FLIP
+====================== */
 
 const pageFlip = new St.PageFlip(
     document.getElementById("book"),
     {
-        width: 900,
-        height: 600,
+        width: 1000,
+        height: 700,
 
         size: "stretch",
 
-        minWidth: 315,
-        maxWidth: 1200,
+        minWidth: 320,
+        maxWidth: 2000,
 
         minHeight: 400,
-        maxHeight: 800,
+        maxHeight: 2000,
 
         showCover: true,
 
-        mobileScrollSupport: true,
-
-        flippingTime: 1200,
-
         usePortrait: true,
 
-        startPage: 0,
+        mobileScrollSupport: false,
 
         autoSize: true,
 
-        maxShadowOpacity: 0.5
+        maxShadowOpacity: 0.3,
+
+        flippingTime: 1000
     }
 );
 
@@ -36,9 +34,9 @@ pageFlip.loadFromHTML(
     document.querySelectorAll(".page")
 );
 
-/* =========================
+/* ======================
    OPEN BUTTON
-========================= */
+====================== */
 
 document
 .getElementById("openBook")
@@ -48,12 +46,12 @@ document
 
 });
 
-/* =========================
+/* ======================
    COUNTDOWN
-========================= */
+====================== */
 
 const targetDate = new Date(
-    "2026-06-17T06:00:00"
+"2026-06-17T06:00:00"
 ).getTime();
 
 function updateCountdown(){
@@ -61,11 +59,6 @@ function updateCountdown(){
     const now = new Date().getTime();
 
     const distance = targetDate - now;
-
-    if(distance <= 0){
-
-        return;
-    }
 
     const days = Math.floor(
         distance /
